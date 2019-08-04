@@ -1,6 +1,6 @@
 const Koa = require('koa')
 const bodyParser = require('koa-bodyparser')
-const cors = require('koa2-cors')
+const cors = require('koa-cors')
 const logger = require('koa-logger')
 const errorHandle = require('./middlewares/errorHandle')
 const checkToken = require('./middlewares/checkToken')
@@ -18,6 +18,13 @@ app
   .use(bodyParser())
 
 app.use(router.routes(), router.allowedMethods())
+
+// app.all('*', function (req, res, next) {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     res.header('Access-Control-Allow-Methods', 'GET, POST');
+//     res.header('Access-Control-Allow-Headers', 'Content-Type');
+//     next();
+// });
 
 app.listen(6060, () => {
   db.sequelize

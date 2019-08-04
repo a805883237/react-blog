@@ -19,7 +19,7 @@
     "koa-bodyparser": "^4.2.1",
     "koa-jwt": "^3.5.1",
     "koa-router": "^7.4.0",
-    "koa2-cors": "^2.0.6",
+    "koa-cors": "^0.0.16",
     "marked": "^0.6.2",
     "mysql2": "^1.6.4",
     "nodemailer": "^6.1.1",

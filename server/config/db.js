@@ -5,7 +5,7 @@ const config = {
   user: isDev ? 'root' : 'root',
   password: isDev ? '123' : 'Admin123!',
   options: {
-    host: isDev ? 'localhost' : '', // 连接的 host 地址
+    host: isDev ? 'localhost' : 'localhost', // 连接的 host 地址
     dialect: 'mysql', // 连接到 mysql
     pool: {
       max: 5,
