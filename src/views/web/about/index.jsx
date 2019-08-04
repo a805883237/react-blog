@@ -31,29 +31,29 @@ function About(props) {
       <p>本博客使用的技术为 react v16.8 + antd + koa2 + mysql</p>
       <p>
         源码地址为{' '}
-        <a target="_blank" rel="noreferrer noopener" href="https://github.com/gershonv/react-blog">
+        <a target="_blank" rel="noreferrer noopener" href="https://github.com/a805883237/react-blog">
           github
         </a>
         ，仅供参考，不做商业用途！
       </p>
       <Divider orientation="left">关于我</Divider>
       <ul className="about-list">
-        <li>姓名：郭少威</li>
-        <li>学历专业：本科 软件工程</li>
+        <li>姓名：安冬冬</li>
+        <li>本科 计算机科学与技术</li>
         <li>
           联系方式：
-          <Icon type="qq" /> 434358603
+          <Icon type="qq" /> 805883237
           <Divider type="vertical" />
           <i className="iconfont icon-email" />
-          <a href="mailto:gershonv@163.com">gershonv@163.com</a>
+          <a href="mailto:anddju@foxmail.com">anddju@foxmail.com</a>
         </li>
-        <li>坐标：广州市</li>
+        <li>坐标：北京市</li>
         <li>
           其他博客地址：
-          <a target="_blank" rel="noreferrer noopener" href="https://gershonv.github.io/">
+          {/*<a target="_blank" rel="noreferrer noopener" href="https://gershonv.github.io/">
             hexo 博客
           </a>
-          <Divider type="vertical" />
+          <Divider type="vertical" />*/}
           <a target="_blank" rel="noreferrer noopener" href="https://www.jianshu.com/u/ce09c5b0b9b0">
             简书主页
           </a>
@@ -66,7 +66,7 @@ function About(props) {
               <Rate defaultValue={3} disabled />
             </li>
             <li>
-              react vue 框架：熟练掌握使用！
+              react 框架：熟练掌握使用！
               <Rate defaultValue={3} disabled />
             </li>
             <li>
@@ -86,8 +86,8 @@ function About(props) {
         <li>
           其他
           <ul>
-            <li>常用开发工具： vscode、webstorm、git</li>
-            <li>熟悉的 UI 工具： antd、element-ui、vux</li>
+            <li>常用开发工具： atom、webstorm、git</li>
+            <li>熟悉的 UI 工具： antd、echarts</li>
             <li>良好的代码习惯： 略微代码洁癖、注释规范 jsdoc</li>
           </ul>
         </li>

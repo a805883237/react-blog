@@ -192,7 +192,7 @@ function AuthModal(props) {
         <FormBuilder meta={formMeta} form={props.form} />
 
         <div className="tips-wrap">
-          <span className="tips">忘记密码请联系博主 gershonv@163.com</span>
+          <span className="tips">忘记密码请联系博主 anddju@foxmail.com</span>
         </div>
 
         <Button type="primary" block htmlType="submit" onClick={handleSubmit}>
