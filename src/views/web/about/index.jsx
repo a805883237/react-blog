@@ -54,8 +54,8 @@ function About(props) {
             hexo 博客
           </a>
           <Divider type="vertical" />
-          <a target="_blank" rel="noreferrer noopener" href="https://juejin.im/user/5acac6c4f265da2378408f92">
-            掘金主页
+          <a target="_blank" rel="noreferrer noopener" href="https://www.jianshu.com/u/ce09c5b0b9b0">
+            简书主页
           </a>
         </li>
         <li>

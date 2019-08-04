@@ -46,19 +46,19 @@ class BolgSider extends Component {
     return (
       <div className="sider-wrapper">
         <img src={avatar} className="sider-avatar" alt="" />
-        <h2 className="name">郭大大</h2>
-        <div className="title">前端打杂人员，略微代码洁癖</div>
+        <h2 className="name">andd</h2>
+        <div className="title">前端老实人，轻微代码洁癖</div>
         <ul className="link-list">
           <li>
             <Icon type="github" />
-            <a target="_blank" rel="noreferrer noopener" href="https://github.com/gershonv">
+            <a target="_blank" rel="noreferrer noopener" href="https://github.com/a805883237">
               github
             </a>
           </li>
           <li>
             <i className="iconfont icon-juejin" />
-            <a target="_blank" rel="noreferrer noopener" href="https://juejin.im/user/5acac6c4f265da2378408f92">
-              juejin
+            <a target="_blank" rel="noreferrer noopener" href="https://www.jianshu.com/u/ce09c5b0b9b0">
+              简书
             </a>
           </li>
         </ul>
