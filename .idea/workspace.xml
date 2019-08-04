@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ddc43d5-bc0b-4900-9086-ec29173a1ec0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/yarn.lock" afterPath="$PROJECT_DIR$/server/yarn.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/web/authModal/index.jsx" afterPath="$PROJECT_DIR$/src/components/web/authModal/index.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/web/about/index.jsx" afterPath="$PROJECT_DIR$/src/views/web/about/index.jsx" />
-    </list>
+    <list default="true" id="4ddc43d5-bc0b-4900-9086-ec29173a1ec0" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -282,12 +278,12 @@
       <updated>1564803051333</updated>
       <workItem from="1564803057693" duration="2000000" />
       <workItem from="1564837181899" duration="6750000" />
-      <workItem from="1564958420702" duration="1037000" />
+      <workItem from="1564958420702" duration="1098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9787000" />
+    <option name="totallyTimeSpent" value="9848000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="75" y="38" width="1205" height="698" extended-state="0" />
