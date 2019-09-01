@@ -63,7 +63,32 @@ module.exports = {
     }
   },
 
-  // 获取文章详情
+
+    /**
+     * @api {get} /article/get/:id 获取文章详情
+     * @apiName GetArticle
+     * @apiDescription 获取文章详情
+     * @apiGroup article
+     *
+     * @apiParam {Number} id 文章id
+     *
+     * @apiSuccess {String} code 查询状态.
+     * @apiSuccess {Object} data  返回文章数据
+     * @apiSuccess {Number} data.id  文章ID
+     * @apiSuccess {String} data.title  文章标题
+     * @apiSuccess {String} data.content  文章内容
+     * @apiSuccess {Object[]} data.categories  所属分类
+     * @apiSuccess {String} data.categories.name  分类名称
+     * @apiSuccess {Object[]} data.tags  所属标签
+     * @apiSuccess {String} data.tags.name  标签名称
+     * @apiSuccess {String} data.createdAt  创建时间
+     * @apiSuccess {String} data.updatedAt  更新时间
+     * @apiSuccess {Object[]} data.comments  文章评论
+     *
+     * @apiSuccessExample Success-Response:
+     *     HTTP/1.1 200 OK
+     *     {"code":200,"data":{"createdAt":"2019-08-05 07:23:38","updatedAt":"2019-08-05 07:23:38","id":6,"title":"服务器上传本地文件","content":"### scp 上传 web 文件\n[参考](https://blog.csdn.net/resilient/article/details/85334594)\n```\nscp -r ./build/* root@39.106.192.160:/var/www/public/web\n```","showOrder":null,"tags":[{"name":"upload"}],"categories":[{"name":"服务器"}],"comments":[]}}
+     */
   async getArticleById(ctx) {
     const id = ctx.params.id
     const data = await ArticleModel.findOne({
@@ -91,9 +116,44 @@ module.exports = {
     ctx.body = { code: 200, data }
   },
 
-  /**
-   * 查询文章列表
-   *
+
+    /**
+     * @api {get} /article/getList 文章列表
+     * @apiName getList
+     * @apiDescription 查询文章列表
+     * @apiGroup article
+     *
+     * @apiParam {String} title 文章名称
+     * @apiParam {String} tag 标签查找
+     * @apiParam {String} category 分类查找
+     * @apiParam {Boolean} fetchTop 创建时间
+     * @apiParam {Number} pageSize 查询每页数量
+     * @apiParam {Number} page 查询页码
+     *
+     * @apiSuccess {String} code 查询状态.
+     * @apiSuccess {String} count  数量总计
+     * @apiSuccess {Object[]} rows  返回数量列表
+     * @apiSuccess {Number} rows.id  文章ID
+     * @apiSuccess {String} rows.title  文章标题
+     * @apiSuccess {String} rows.content  文章内容
+     * @apiSuccess {Object[]} rows.categories  所属分类
+     * @apiSuccess {String} rows.categories.name  分类名称
+     * @apiSuccess {Object[]} rows.tags  所属标签
+     * @apiSuccess {String} rows.tags.name  标签名称
+     * @apiSuccess {String} rows.createdAt  创建时间
+     * @apiSuccess {String} rows.updatedAt  更新时间
+     * @apiSuccess {Object[]} rows.comments  文章评论
+     *
+     * @apiSuccessExample Success-Response:
+     *     HTTP/1.1 200 OK
+     *     {
+     *       "code": 200,
+     *       "count": 2,
+     *       "rows": [{"createdAt":"2019-08-05 07:23:38","updatedAt":"2019-08-05 07:23:38","id":6,"title":"服务器上传本地文件","content":"### scp 上传 web 文件\n[参考](https://blog.csdn.net/resilient/article/details/85334594)\n```\nscp -r ./build/* root@39.106.192.160:/var/www/public/web\n```","showOrder":null,"tags":[{"name":"upload"}],"categories":[{"name":"服务器"}],"comments":[]},{"createdAt":"2019-08-05 06:49:20","updatedAt":"2019-08-05 06:49:20","id":5,"title":"JS订阅模式","content":"121312312\n中文测试","showOrder":null,"tags":[{"name":"订阅"}],"categories":[{"name":"js"}],"comments":[{"createdAt":"2019-09-01 22:19:50","updatedAt":"2019-09-01 22:19:50","id":2,"replies":[]}]
+     *     }
+     */
+
+  /** 查询文章列表
    * @param {Number} offset - 当前页码 默认1
    * @param {Number} limit - 限制查询数量 默认 10
    * ...
@@ -102,7 +162,7 @@ module.exports = {
     let { page = 1, pageSize = 10, title, tag, category, rangTime, fetchTop } = ctx.query,
       offset = (page - 1) * pageSize,
       queryParams = {},
-      order = [['createdAt', 'DESC']]
+      order = [['createdAt', 'DESC']];
 
     if (title) queryParams.title = { $like: `%${title}%` }
     if (fetchTop === 'true') {
@@ -131,7 +191,7 @@ module.exports = {
       order,
       row: true,
       distinct: true
-    })
+    });
 
     ctx.body = { code: 200, ...data }
   },

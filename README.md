@@ -3,53 +3,14 @@
 使用 `react` 有一段时间了, 也想用 `react` 去写点什么，平时接触最多的就是 blog 了，于是乎借助 `antd` 这个 UI 框架设计出了一个极其简约风格的 `spa` 博客。
 目的也是将 `react` 的生态圈的工具梳理一遍，后端则采用了 `koa + sequelize + mysql` 的技术选型（我司用的就是这个技术栈啦，所以笔者也用这个了）
 
-## 版本更新记录
-
-### 2019-06-05 hooks 重写
-
-- 以 `react hooks` 写法重构组件
-
-### 2019-05-20 `webpack` 配置优化打包
-
-- `webpack` 配置优化打包，对依赖进行拆分以减小打包后的文件体积
-- `cdn` 方式引入 `highlight.js`
-
-更多 [webpack-perf](https://github.com/gershonv/react-blog/tree/webpack-perf)
-
-### 2019-04-25 添加邮箱、用户名登录
-
-- 登录功能：用户名/邮箱 均可登录
-- 个人信息：用户的相关信息均可修改
-- 邮件功能：**评论回复（绑定了邮箱的账户）如果有更新 都会自动通过邮件通知！**
-
-更多 [email-notice](https://github.com/gershonv/react-blog/tree/email-notice)
-
-### 2019-02-01 构建后端项目
-
-- 构建后端项目 -`koa + koa-router + sequelize + jwt`
-
-更多 [server-chore](https://github.com/gershonv/react-blog/tree/server-chore)
-
-### 2019-01-23 构建前端项目
-
-- 构建前端项目
-  - `npm run eject`
-  - `less + antd + redux + react-router + lazyload`...
-
-更多 [client-chore](https://github.com/gershonv/react-blog/tree/client-chore)
-
 ## 博客介绍
 
-- 前后台分离式开发（项目中也包含博客的后台管理系统），为了方便记录后端开发过程，笔者将后端也一起放在同个项目文件夹中。
 - 博客样式几乎借助于 antd 这个优秀的 UI 框架，主打简约风格，是笔者借鉴了 antd 官方的风格所设计。
 - 分出了几个分支便于学习和查看开发记录，相信这个项目会让刚接触 react 的伙伴学到一些的
 
-- [博客地址](https://guodada.fun) - 联系我可以 email gershonv@163.com | QQ 434358603 | 博客关于页面留言~
-- [项目地址](https://github.com/gershonv/react-blog)
-- [预览地址](http://test.guodada.fun)
-  - 用户名 admin/admin 最高权限，求小伙伴不要乱删数据，乱删数据其他伙伴会没什么数据看的。
-  - 给最高权限是为了让大家看到博主的权限。体验博客完整的功能。
-  - 后台访问路径 /admin
+- [博客地址](https://andd.top) - 联系我可以 email anddju@foxmail.com | QQ 805883237 | 博客关于页面留言~
+- [项目地址](https://github.com/a805883237/react-blog)
+
 
 ### 实现功能
 
@@ -76,26 +37,9 @@
   - jwt + bcrypt
   - nodemailer
 
-### 分支
-
-为了方便查看开发记录笔者分了几个分支
-
-1. [client-chore](https://github.com/gershonv/react-blog/tree/client-chore): 记录前端项目的构建过程
-   1. 配置 react + antd + less + babel-plugins-import
-   2. 配置 redux + redux-thunk + redux-logger (开发和生产环境)
-   3. 配置 装饰器 + axios 封装 + 路由配置（主博客路由 和 admin 管理系统）
-2. [server-chore](https://github.com/gershonv/react-blog/tree/server-chore): 记录后端项目的构建过程
-   1. 配置 koa + koa-router + 中间件
-   2. 项目结构划分（mvc 结构）
-   3. 配置 sequelize 以及数据库的设计
-   4. ...
-3. [client-markdown](https://github.com/gershonv/react-blog/tree/client-markdown): 配置 markdown 语法高亮
-4. [dev](https://github.com/gershonv/react-blog/tree/dev): 开发分支
-5. [email-notice](https://github.com/gershonv/react-blog/tree/email-notice): 邮件推送服务
-
 ## 效果
 
-[预览地址在这](http://test.guodada.fun)
+[预览地址在这](http://www.andd.top)
 
 ### 概览
 
