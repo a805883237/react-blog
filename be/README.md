@@ -1,36 +1,47 @@
-# be
+# vue-antd-admin
+**[Ant Design Pro](https://github.com/ant-design/ant-design-pro) 的 Vue 实现**
 
-## Project setup
-```
-npm install
-```
+一个开箱即用的中后台前端/设计解决方案（主要依赖组件库 [ant-design-vue](https://github.com/vueComponent/ant-design-vue) ）
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+[预览地址](https://iczer.gitee.io/vue-antd-pro)
 
-### Compiles and minifies for production
+![](https://github.com/iczer/vue-antd-admin/blob/master/static/img/preview.jpg)
+## 环境
+* node -- 运行/编译
+* yarn -- 依赖管理
+* webpack -- 打包
+* eslint -- 代码规约
+* vue-cli -- 构建
+## 依赖
+* @antv/data-set: ^0.8.9
+* ant-design-vue: ^1.0.3
+* axios: ^0.18.0
+* clipboard: ^2.0.1
+* date-fns: ^1.29.0
+* enquire.js: ^2.1.6
+* mockjs: ^1.0.1-beta3
+* pouchdb: ^7.0.0
+* viser-vue: ^2.2.5
+* vue: ^2.5.17
+* vue-router: ^3.0.1
+* vuedraggable: ^2.16.0
+* vuex: ^3.0.1
+## 安装
+克隆项目到本地:
 ```
-npm run build
+$ git clone https://github.com/iczer/vue-antd-admin.git
 ```
-
-### Run your tests
+安装依赖：
 ```
-npm run test
+$ yarn install
 ```
-
-### Lints and fixes files
+## 启动
 ```
-npm run lint
+$ yarn start
 ```
+## 文档
+编写中...
+## 说明
+该项目由仓主在业余由兴趣驱动完成，仍在不断开发完善中。详见：[开发进度](https://github.com/iczer/vue-antd-admin/projects/1)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-
-# 处理过的坑
-- antd 的 message 组件不能再全局用
-
-  解决方法： 放到全局的 `app.vue` 的 `created` 生命周期内， 将 this.$message 绑定到 `global` 内 ，这样全局都可以调用 `message`
+如有任何疑问或功能需求，欢迎 [Issue](https://github.com/iczer/vue-antd-admin/issues)。
