@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import PageView from '@/layouts/PageView'
 import RouteView from '@/layouts/RouteView'
 import MenuView from '@/layouts/MenuView'
-import Login from '@/pages/login/Login'
+import Login from '@/pages/login/index'
 import Home from '@/pages/About'
 
 Vue.use(Router)

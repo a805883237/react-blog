@@ -10,7 +10,8 @@ import enquireScreen from './utils/device'
 export default {
   name: 'App',
   created () {
-    let _this = this
+    let _this = this;
+    global.message = this.$message;
     enquireScreen(isMobile => {
       _this.$store.commit('setting/setDevice', isMobile)
     })
