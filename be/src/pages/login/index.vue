@@ -68,8 +68,10 @@
         let params = {
           account , password
         };
-
-        this.$store.dispatch("auth/login" , params)
+        let that = this;
+        this.$store.dispatch("auth/login" , params).then( () => {
+          that.$router.push( "/home" )
+        })
       }
     }
   }
