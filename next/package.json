@@ -1,0 +1,24 @@
+{
+  "name": "with-ant-design",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=production node server.js",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "prod": "next build && pm2 start ecosystem.config.js --only prod-front --watch"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "antd": "^3.9.2",
+    "babel-plugin-import": "^1.9.1",
+    "express": "^4.17.1",
+    "next": "latest",
+    "null-loader": "2.0.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^6.0.3"
+  }
+}

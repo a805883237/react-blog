@@ -3,7 +3,7 @@ const isDev = process.env.NODE_ENV === 'development'
 const config = {
   database: isDev ? 'blogdev' : 'react_blog',
   user: isDev ? 'root' : 'root',
-  password: isDev ? '123' : 'Admin123!',
+  password: isDev ? 'An719657480' : 'Admin123!',
   options: {
     host: isDev ? 'localhost' : 'localhost', // 连接的 host 地址
     dialect: 'mysql', // 连接到 mysql
