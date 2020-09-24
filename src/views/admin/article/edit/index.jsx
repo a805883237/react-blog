@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Prompt } from 'react-router-dom'
 
 import SimpleMDE from 'simplemde'
 import 'simplemde/dist/simplemde.min.css'
@@ -37,6 +38,31 @@ class Edit extends Component {
         this.setState({ title, tagList, categoryList, isEdit: true, articleId })
       })
     }
+  
+    // 绑定回退事件
+    window.addEventListener('beforeunload', this.windowBack.bind(this));
+  }
+  
+  componentWillUnmount(){
+      window.removeEventListener('beforeunload', this.windowBack.bind(this))
+  }
+  
+  windowBack(e) {
+    e = e || window.event;
+    if(e){
+      e.returnValue = '当前页面未保存，是否关闭当前页面';
+    }
+    return '当前页面未保存，是否关闭当前页面';
+  }
+  
+  checkInputOnBack(location){
+    if(
+      this.state.title
+      || this.smde.value()
+    ) {
+      return '有内容修改未保存，是否离开';
+    }
+    return true;
   }
 
   /**
@@ -86,6 +112,7 @@ class Edit extends Component {
     const { title, value, categoryList, tagList, isEdit } = this.state
     return (
       <div className="edit">
+        <Prompt message={this.checkInputOnBack.bind(this)}/>
         <div className="blog-formItem">
           <span className="label">标题：</span>
           <Input
